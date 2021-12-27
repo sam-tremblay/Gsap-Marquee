@@ -1,0 +1,35 @@
+.marquee{
+	display: flex;
+	.track{
+		display: inline-flex;
+		white-space: nowrap;
+		align-items: center;
+		.items{
+			display: inline-flex;
+			align-items: center;
+			.item{
+				background: #000;
+				display: inline-block;
+				width: 280px;
+				height: 110px;
+				&+.item{
+					margin: 0 0 0 65px;
+				}
+			}
+
+			&+.items{
+				margin: 0 0 0 65px;
+			}
+		}
+	}
+
+	&:nth-child(2){
+		.track{
+			.items{
+				.item{
+					width: 320px;
+				}
+			}
+		}
+	}
+}
